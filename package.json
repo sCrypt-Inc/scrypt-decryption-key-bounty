@@ -1,0 +1,43 @@
+{
+  "name": "scrypt-decryption-key-bounty",
+  "version": "0.0.1",
+  "description": "Privately trade decryption key for some specific encrypted data",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "NODE_OPTIONS=--max_old_space_size=56000 mocha --exit -r ts-node/register 'test/**/*.ts'",
+    "deploy": "npx ts-node deploy/deploy.ts",
+    "claim": "npx ts-node deploy/claim.ts",
+    "deadline-cancel": "npx ts-node deploy/deadlineCancel.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sCrypt-Inc/scrypt-decryption-key-bounty.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sCrypt-Inc/scrypt-decryption-key-bounty/issues"
+  },
+  "homepage": "https://github.com/sCrypt-Inc/scrypt-decryption-key-bounty#readme",
+  "dependencies": {
+    "circomlib": "^2.0.2",
+    "snarkjs": "^0.4.10",
+    "scryptlib": "^1.0.8",
+    "blake-hash": "^1.1.0",
+    "blake2b": "^2.1.3",
+    "web3-utils": "^1.3.0",
+    "ts-sync-request": "^1.4.1"
+  },
+  "devDependencies": {
+    "@noble/secp256k1": "1.3.4",
+    "@types/chai": "^4.3.0",
+    "@types/expect": "^24.3.0",
+    "@types/mocha": "^9.0.0",
+    "chai": "^4.3.4",
+    "circom_tester": "0.0.9",
+    "mocha": "^9.1.3",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.4"
+  }
+}
